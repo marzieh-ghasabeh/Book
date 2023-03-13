@@ -1,7 +1,7 @@
 
 public abstract class Bbook {
-    String titel;
-    double price;
+    protected String titel;
+    protected double price;
 
     public Bbook(String titel) {
         this.titel = titel;
@@ -15,7 +15,11 @@ public abstract class Bbook {
         return price;
     }
 
-    public abstract void setPrice(double price);
+    public abstract void setPrice();
+    @Override
+    public String toString(){
+        return "titel is : " + getTitel() + " and price is: " + getPrice();
+    }
 }
 
 
